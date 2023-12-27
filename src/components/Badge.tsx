@@ -1,5 +1,5 @@
-function Badge({ word }: { word: string }) {
-  return <div className="badge">{word}</div>;
+function Badge({ word, className }: { word: string; className: string }) {
+  return <div className={className}>{word}</div>;
 }
 
 export default Badge;

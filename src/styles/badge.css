@@ -1,0 +1,37 @@
+:root {
+  --primary : #3a4ee0
+}
+
+.badge {
+  background: var(--primary);
+  color: #f5fafa;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: transform 0.4s;
+  cursor: pointer;
+  transform-origin: center;
+  transform-style: flat;
+  box-shadow: -10px -5px 3px #3333;
+}
+.badge:hover {
+  box-shadow: none;
+  transform: translateZ(10px);
+}
+
+.words,
+.words--menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  perspective: 100px;
+}
+.words--menu {
+  gap: 10px;
+  border-radius: 1rem;
+  outline: var(--primary) 3px solid;
+  padding: 1rem;
+  flex-shrink: calc(100px -40px);
+}
+
+.words--menu * {
+}
