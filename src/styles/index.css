@@ -2,12 +2,17 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .combo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background: #000; */
+  justify-content: center;
+  min-height: 100vh;
 }
 
 input,button {

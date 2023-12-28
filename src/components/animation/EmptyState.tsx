@@ -1,17 +1,22 @@
-import React from "react";
-import Lottie, { useLottie, useLottieInteractivity } from "lottie-react";
-import emptyState from "../../assets/animations/emptyState.json";
-function EmptyState() {
-  const options = {
-    width: 10,
-    height: 10,
-    autoplay: true,
-    animationData: emptyState,
-    loop: true,
-  };
-
-  const { View } = useLottie(options);
-  return <>{View}</>;
+import Lottie from "lottie-react";
+import empty_state_cool from "../../assets/animations/empty_state_cool.json";
+function EmptyState({ searchWord }: { searchWord: string }) {
+  return (
+    <>
+      <Lottie
+        style={{
+          width: 200,
+          height: 200,
+        }}
+        loop
+        autoplay
+        animationData={empty_state_cool}
+      ></Lottie>
+      <span className="not-found">
+        No Synonyms / antonyms were found for {searchWord}
+      </span>
+    </>
+  );
 }
 
 export default EmptyState;
