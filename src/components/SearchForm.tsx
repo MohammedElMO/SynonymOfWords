@@ -1,20 +1,20 @@
 import { FormEvent } from "react";
 import Input from "./common/components/Input";
-import "../styles/search.css"
+import "../styles/search.css";
 function SearchForm({
   setSearchWord,
-  isLoading
+  isLoading,
 }: {
   setSearchWord: (word: string) => void;
-  isLoading:boolean
+  isLoading: boolean;
 }) {
   const onSubmitSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const form = new FormData(e.currentTarget as HTMLFormElement);
     const searchWordInput = form.get("searchWord");
-    console.log(searchWordInput);
-    if (searchWordInput?.toString()) setSearchWord(searchWordInput.toString());
+    if (searchWordInput?.toString()) 
+    setSearchWord(searchWordInput.toString());
 
     // setSearchWord("");
   };
@@ -29,7 +29,9 @@ function SearchForm({
         type="text"
         accessKey="SHIFT"
       />
-      <button disabled={isLoading} type="submit" className="look_up">Look Up</button>
+      <button disabled={isLoading} type="submit" className="look_up">
+        Look Up
+      </button>
     </form>
   );
 }

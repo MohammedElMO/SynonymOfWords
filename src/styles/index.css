@@ -13,6 +13,7 @@
   /* background: #000; */
   justify-content: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 input,button {

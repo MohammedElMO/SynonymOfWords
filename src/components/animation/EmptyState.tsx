@@ -11,7 +11,7 @@ function EmptyState({ searchWord }: { searchWord: string }) {
         loop
         autoplay
         animationData={empty_state_cool}
-      ></Lottie>
+      />
       <span className="not-found">
         No Synonyms / antonyms were found for {searchWord}
       </span>

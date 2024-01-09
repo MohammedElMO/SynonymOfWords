@@ -1,8 +1,14 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
+// import DoneToaster from "../assets/animations/toaster/DoneToaster";
 import Loading from "./status/Loading";
-import Done from "./status/Done";
 
-function ProgressState({ status }: { status: Status }) {
+function ProgressState({
+  status,
+}: // isClicked,
+{
+  // isClicked: boolean;
+  status: Status;
+}) {
   const mapper: {
     [key in Status]: { component: ReactNode };
   } = {
@@ -10,7 +16,7 @@ function ProgressState({ status }: { status: Status }) {
       component: <Loading />,
     },
     done: {
-      component: <Done />,
+      component: <></>,
     },
     start: {
       component: <></>,
